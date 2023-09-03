@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 
-const Base = ({ addBase, pizza }) => {
+const Base = () => {
+  const { addBase, pizza } = useOutletContext();
+
   const bases = ['Classic', 'Thin & Crispy', 'Thick Crust'];
 
   return (
