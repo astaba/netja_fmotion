@@ -8,9 +8,14 @@ const containerVariants = {
 };
 const buttonVariants = {
   hover: {
-    scale: [1, 1.1, 1, 1.1, 1, 1.1, 1],
+    scale:  1.1,
     boxShadow: "0px 0px 8px rgb(255, 255, 255)",
     textShadow: "0px 0px 8px rgb(255, 255, 255)",
+    transition: {
+      repeat: Infinity,
+      repeatType: "reverse",
+      duration: 0.2,
+    }
   },
 };
 

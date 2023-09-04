@@ -30,6 +30,28 @@ const nextVariants = {
   },
 };
 
+const listVariants = {
+  hover: {
+    scale: 1.3,
+    originX: 0,
+    color: "#f8e112",
+    transition: { type: "spring", stiffness: 300 },
+  },
+};
+
+const buttonVariants = {
+  hover: {
+    scale: 1.1,
+    boxShadow: "0px 0px 8px rgb(255, 255, 255)",
+    textShadow: "0px 0px 8px rgb(255, 255, 255)",
+    transition: {
+      repeat: Infinity,
+      repeatType: "reverse",
+      duration: 0.2,
+    },
+  },
+};
+
 const Base = () => {
   const { addBase, pizza } = useOutletContext();
 
@@ -48,8 +70,8 @@ const Base = () => {
           let spanClass = pizza.base === base ? "active" : "";
           return (
             <motion.li
-              whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
-              transition={{ type: "spring", stiffness: 300 }}
+              variants={listVariants}
+              whileHover="hover"
               key={base}
               onClick={() => addBase(base)}
             >
@@ -62,13 +84,7 @@ const Base = () => {
       {pizza.base && (
         <motion.div variants={nextVariants} className="next">
           <Link to="/toppings">
-            <motion.button
-              whileHover={{
-                scale: 1.1,
-                boxShadow: "0px 0px 5px rgb(255, 255, 255)",
-                textShadow: "0px 0px 5px rgb(255, 255, 255)",
-              }}
-            >
+            <motion.button variants={buttonVariants} whileHover="hover">
               Next
             </motion.button>
           </Link>
