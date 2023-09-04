@@ -7,6 +7,7 @@ const Home = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      transition={{ delay: 1.25, duration: 1.75 }}
       className="home container"
     >
       <h2>Welcome to Pizza Joint</h2>
