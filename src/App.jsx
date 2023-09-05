@@ -7,7 +7,7 @@ import Home from "./components/Home";
 import Base from "./components/Base";
 import Toppings from "./components/Toppings";
 import Order from "./components/Order";
-import { PizzaContextProvider } from "./store/pizzaContext";
+import PizzaContextProvider from "./store/PizzaContextProvider";
 
 function App() {
   const location = useLocation();

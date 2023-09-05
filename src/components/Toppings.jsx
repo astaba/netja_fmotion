@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import { usePizzaContext } from "../store/pizzaContext";
+import usePizzaContext from "../hook/usePizzaContext";
 
 const containerVariants = {
   hidden: {
