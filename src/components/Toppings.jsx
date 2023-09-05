@@ -1,6 +1,8 @@
 import React from "react";
-import { Link, useOutletContext } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+
+import { usePizzaContext } from "../store/pizzaContext";
 
 const containerVariants = {
   hidden: {
@@ -40,7 +42,7 @@ const buttonVariants = {
 };
 
 const Toppings = () => {
-  const { addTopping, pizza } = useOutletContext();
+  const { addTopping, pizza } = usePizzaContext();
 
   let toppings = [
     "mushrooms",

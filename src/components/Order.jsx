@@ -1,6 +1,6 @@
 import React from "react";
-import { useOutletContext } from "react-router-dom";
 import { motion } from "framer-motion";
+import { usePizzaContext } from "../store/pizzaContext";
 
 const containerVariants = {
   hidden: {
@@ -29,7 +29,7 @@ const childVariants = {
 };
 
 const Order = () => {
-  const { pizza } = useOutletContext();
+  const { pizza } = usePizzaContext();
 
   return (
     <motion.div
