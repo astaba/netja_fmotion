@@ -104,3 +104,25 @@ li span.active::before{
 .order p{
   margin: 20px auto;
 }
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background-color: rgba(50, 50, 50, 0.6);
+}
+
+.modal {
+  top: 30vh;
+  background-color: rgb(83, 72, 72);
+  width: 400px;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 20px;
+  border: 3px solid white;
+  z-index: 100;
+}
+
+.modal button:not(:last-of-type) {
+  margin-right: 1rem;
+}

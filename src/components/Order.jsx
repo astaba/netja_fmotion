@@ -29,9 +29,25 @@ const childVariants = {
     opacity: 1,
   },
 };
+const buttonVariants = {
+  hover: {
+    scale: 1.1,
+    boxShadow: "0px 0px 8px rgb(255, 255, 255)",
+    textShadow: "0px 0px 8px rgb(255, 255, 255)",
+    transition: {
+      repeat: 2,
+      repeatType: "reverse",
+      duration: 0.2,
+    },
+  },
+};
 
-const Order = () => {
+const Order = ({ setIsOpenModal }) => {
   const { pizza } = usePizzaContext();
+
+  const handleReset = () => {
+    setIsOpenModal(true);
+  };
 
   return (
     <motion.div
@@ -50,6 +66,14 @@ const Order = () => {
           {topping}
         </motion.div>
       ))}
+      <motion.button
+        variants={buttonVariants}
+        whileHover="hover"
+        type="button"
+        onClick={handleReset}
+      >
+        Reset
+      </motion.button>
     </motion.div>
   );
 };
