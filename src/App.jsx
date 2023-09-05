@@ -16,10 +16,10 @@ function App() {
   // console.log(location);
   const [isOpenModal, setIsOpenModal] = useState(false);
 
-  const { pathname } = location;
-  useEffect(() => {
-    setIsOpenModal(false);
-  }, [pathname]);
+  // const { pathname } = location;
+  // useEffect(() => {
+  //   setIsOpenModal(false);
+  // }, [pathname]);
 
   return (
     <PizzaContextProvider>
@@ -31,7 +31,7 @@ function App() {
           </Modal>
         )}
       </AnimatePresence>
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" onExitComplete={() => setIsOpenModal(false)}>
         <Routes location={location} key={location.pathname}>
           <Route path="/base" element={<Base />} />
           <Route path="/toppings" element={<Toppings />} />
