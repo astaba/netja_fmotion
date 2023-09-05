@@ -17,6 +17,7 @@ const containerVariants = {
       delay: 0.5,
     },
   },
+  disappear: { x: "-100vw", transition: { ease: "easeInOut" } },
 };
 
 const listVariants = {
@@ -58,6 +59,7 @@ const Toppings = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
+      exit="disappear"
       className="toppings container"
     >
       <h3>Step 2: Choose Toppings</h3>

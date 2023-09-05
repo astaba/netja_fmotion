@@ -18,6 +18,7 @@ const containerVariants = {
       staggerChildren: 0.4,
     },
   },
+  disappear: { x: "-100vw", transition: { ease: "easeInOut" } },
 };
 const childVariants = {
   hidden: {
@@ -36,6 +37,7 @@ const Order = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
+      exit="disappear"
       className="container order"
     >
       <h2>Thank you for your order :)</h2>

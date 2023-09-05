@@ -16,6 +16,7 @@ const containerVariants = {
       delay: 0.5,
     },
   },
+  disappear: { x: "-100vw", transition: { ease: "easeInOut" } },
 };
 
 const nextVariants = {
@@ -63,6 +64,7 @@ const Base = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
+      exit="disappear"
       className="base container"
     >
       <h3>Step 1: Choose Your Base</h3>
