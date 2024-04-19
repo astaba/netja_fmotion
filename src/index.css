@@ -126,3 +126,11 @@ li span.active::before{
 .modal button:not(:last-of-type) {
   margin-right: 1rem;
 }
+
+.loader {
+  height: 15px;
+  width: 15px;
+  border: solid 3px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
